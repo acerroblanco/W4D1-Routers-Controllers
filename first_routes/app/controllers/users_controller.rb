@@ -8,6 +8,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: params 
+    render json: params
+  end
+
+  def user_params
+    params.require(:user).permit(:username)
   end
 end
